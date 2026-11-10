@@ -1,0 +1,49 @@
+/* opción B — animaciones estilo asc.education */
+header,header.s{background:rgba(0,0,0,.45);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-color:rgba(169,150,189,.15)}
+header.s{background:rgba(0,0,0,.72)}
+.hero-track{height:220vh;position:relative;background:#000}
+.dlhero{position:sticky;top:0;height:100svh;overflow:hidden;color:#fff;padding:0}
+.mask-layer{position:absolute;inset:0;transform:scale(1.4);-webkit-mask:url(../assets/mark.png) center/min(52vh,60vw) no-repeat;mask:url(../assets/mark.png) center/min(52vh,60vw) no-repeat}
+.mask-fill{position:absolute;inset:0;background:radial-gradient(120% 90% at 30% 20%,#a996bd 0%,#734E7E 40%,#3a2b47 100%);display:flex;flex-direction:column;justify-content:center;gap:2vh;overflow:hidden}
+.mq{white-space:nowrap;font:italic 400 clamp(2.4rem,7vh,5rem)/1 var(--disp);color:rgba(255,255,255,.22);animation:mq 40s linear infinite}
+.m2{animation-direction:reverse;color:rgba(255,255,255,.4);animation-duration:55s}.m3{animation-duration:48s}
+@keyframes mq{to{transform:translateX(-33.33%)}}
+.hero-shade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.hero-intro{position:absolute;inset:auto 0 7vh;display:flex;flex-direction:column;align-items:center;gap:28px}
+.hero-intro img{height:34px;width:auto;opacity:.9}
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.wheel{width:22px;height:36px;border:1px solid rgba(255,255,255,.5);border-radius:12px;position:relative}
+.wheel::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#a996bd;animation:wh 1.6s infinite}
+@keyframes wh{to{opacity:0;transform:translateY(12px)}}
+.v2 .hero{padding-top:150px}
+/* manifiesto */
+.manifest{background:#000;color:#fff;min-height:100vh;display:flex;align-items:center;padding:100px 0}
+.manifest .kk{color:#a996bd}
+.main-text{font:400 clamp(2.1rem,5vw,4.4rem)/1.12 var(--disp);max-width:21ch;margin-top:30px}
+.main-text .hl{display:inline-block;padding:0 .22em;border-radius:.35em;background:var(--ac);color:#fff;font-style:italic}
+/* rows 3D */
+.rows{perspective:1200px}.row{transform-style:preserve-3d;border-radius:14px}
+.row:hover{padding-left:0;background:rgba(115,78,126,.06)}.dk .row:hover{background:rgba(169,150,189,.08)}
+/* glass */
+.pc{background:rgba(255,255,255,.65);backdrop-filter:blur(16px);border:1px solid #eee9f1;border-top:1px solid var(--ink);border-radius:0 0 20px 20px;padding:36px;box-shadow:0 30px 60px -40px rgba(95,73,122,.45)}
+.qc{background:rgba(238,233,241,.5);backdrop-filter:blur(14px);border-radius:0 0 18px 18px;padding:28px}
+form{border-radius:20px;background:rgba(255,255,255,.7);backdrop-filter:blur(18px);box-shadow:0 40px 80px -50px rgba(95,73,122,.5)}
+#cotiza{overflow:hidden}#cotiza::before,#cotiza::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;background:#734E7E;width:420px;height:420px;right:-120px;top:-120px}#cotiza::after{background:#a996bd;left:-120px;right:auto;top:auto;bottom:-140px;width:340px;height:340px}
+#cotiza .w{position:relative;z-index:1}
+.band{border-radius:24px;position:relative;overflow:hidden}
+.wa{backdrop-filter:blur(10px)}
+/* svg */
+.build{display:block;width:100%;max-width:440px;margin:-20px 0 50px auto;overflow:visible}
+/* flip */
+.flips{perspective:1400px;border-top:0;gap:22px}
+.mvv.flips>.flip,.mvv.flips>.flip+.flip{padding:0;border:0}
+.flip{height:300px;cursor:pointer;outline:none}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.flip:hover .flip-in,.flip:focus .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+.front{background:#fff;border:1px solid var(--line);border-top:2px solid var(--ink)}.front h3{font-size:2.4rem}
+.front .fi{color:var(--ac)}.front small{font:600 .68rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mu)}
+.back{background:linear-gradient(140deg,var(--ac),#2a1f33);transform:rotateY(180deg);justify-content:center}
+.mvv .back p{color:rgba(255,255,255,.9);margin:0;font-size:1rem}
+@media(max-width:680px){.flip{height:280px}.mask-layer{-webkit-mask-size:62vw;mask-size:62vw}.build{max-width:320px;margin:0 0 36px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero-track{height:auto}.dlhero{position:relative;height:70vh}.mask-layer{transform:none}.hero-intro{display:none}}
